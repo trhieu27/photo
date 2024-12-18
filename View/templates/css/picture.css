@@ -1,0 +1,15 @@
+.options {
+    display: flex;
+    visibility: hidden;
+    justify-content:space-between;
+    width: 210px;
+}
+
+.upload-img {
+    width: 200px;
+}
+
+.select-form {
+    width: 300px;
+}
+

@@ -1,0 +1,320 @@
+
+.image {
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    height: 150px;
+}
+
+/* Ẩn checkbox mặc định */
+.img-checkbox {
+    position: absolute;
+    left: 184px;
+    transform: scale(1.5);
+    /* Tăng kích thước checkbox */
+    display: none;
+    /* Ẩn checkbox ban đầu */
+    z-index: 10;
+}
+
+/* Hiển thị checkbox khi hover vào vùng ảnh */
+.image:hover .img-checkbox {
+    display: block;
+}
+
+/* Kiểu ảnh */
+.image img {
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+/* Phóng to ảnh khi hover */
+.image:hover img {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Hiển thị checkbox khi có bất kỳ checkbox nào được chọn */
+.show-checkbox .img-checkbox {
+    display: block;
+}
+
+.modal {
+    display: none;
+    /* Ẩn modal mặc định */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Nền tối với độ trong suốt */
+}
+
+.modal-content {
+    height: 80%;
+    margin: auto;
+    display: block;
+    padding-top: 5%;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#imageList div span {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    transform: rotate(-20deg);
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    margin-top: -22px;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+body {
+    display: flex;
+}
+
+.files {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+
+.detail-container {
+    max-width: 340px;
+    display: none;
+    height: 100%;
+}
+
+.detail {
+    width: 340px;
+    height: 100%;
+    background-color: white;
+}
+
+.detail-img {
+    margin: 50px 20px;
+}
+
+#img02 {
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.detail-label {
+    font-weight: bold;
+}
+
+.detail-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-list ul li {
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.detail-li {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    max-width: 300px;
+}
+
+.detail-li-label {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 30px;
+}
+
+.options {
+    display: flex;
+    visibility: hidden;
+    width: 210px;
+    height: 20px;
+    gap: 10px;
+    margin: 0px 40px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.timkiem {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex: 30%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+.thumbnail {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+}
+
+html,
+body {
+    background-color: #f4f7fa;
+    margin: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    background-color: #cde4fe;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 93%;
+    
+}
+
+#cloud-icon {
+    margin-left: 8px;
+    width: 50px;
+}
+
+.menu {  
+    height: calc(100vh - 60px);
+    min-width: 220px;
+}
+
+
+.main-content {
+    background-color: white;  
+    width: calc(100vw - 220px);
+    height: calc(100vh - 60px);
+}
+
+.selection li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+}
+
+.selection li {
+    display: flex;
+    transition: background-color;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+.selection li:hover {
+    background-color: #fbefef;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    padding: 0px 20px;
+}
+
+.line-max {
+    position: relative;
+    width: 60%;
+    height: 5px;
+    background-color: #d8d8d8;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.line-used {
+    position: absolute;
+    width: 20%;
+    height: 5px;
+    background-color: #0b57d0;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+
+/* new */
+.content {
+    padding: 20px;
+    height: calc(100vh - 140px);
+}
+
+.welcom {
+    padding: 0px 20px;
+}
+
+.content_detail {
+    display: flex;
+    justify-content: space-between;
+}
